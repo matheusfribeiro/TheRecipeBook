@@ -1,11 +1,20 @@
 const express = require('express');
+const path = require('path')
+const recipeRoutes = require('./src/routes/recipe')
+const errorController = require('./src/controllers/error')
+
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Route handler for the root path
-app.get('/', (req, res) => {
-  res.send('Hello, this is the root route!');
-});
+// Set the view engine to EJS
+app.set('view engine', 'ejs')
+// Set the views folder path
+app.set('views', path.join(__dirname, 'src', 'views'));
+
+
+app.use(recipeRoutes);
+
+app.use(errorController.get404)
 
 
 
