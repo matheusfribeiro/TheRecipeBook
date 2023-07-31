@@ -11,6 +11,10 @@ app.set('view engine', 'ejs')
 // Set the views folder path
 app.set('views', path.join(__dirname, 'src', 'views'));
 
+// Set the static folder to serve CSS, JS, and other static files
+app.use(express.static(path.join(__dirname, 'src', 'public')));
+
+
 
 app.use(recipeRoutes);
 

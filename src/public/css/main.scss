@@ -1,0 +1,56 @@
+$primary-color: #00264f;
+$container-width: 960px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: bisque;
+}
+
+.top-menu {
+  background-color: $primary-color;
+  padding: 18px;
+  color: white;
+  display: flex;
+  justify-content: center;
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      
+
+      li {
+        display: inline-block;
+        margin-right: 10px;
+
+        a {
+          text-decoration: none;
+          color: white;
+          padding: 5px 10px;
+
+          &:hover {
+            background-color: darken($primary-color, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.container {
+  width: $container-width;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  height: 85vh;
+}
