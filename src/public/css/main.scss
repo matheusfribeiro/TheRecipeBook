@@ -15,6 +15,7 @@ body {
   background-color: bisque;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .top-menu {
@@ -54,6 +55,10 @@ body {
       }
     }
   }
+
+  .active {
+    color: yellow;
+  }
 }
 
 .container {
@@ -62,7 +67,51 @@ body {
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
-  height: 85vh;
+
+  .dish-image {
+    width: 250px;
+  }
+  
+}
+
+.card-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button {
+    background-color: #00264f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #001d3b;
+    }
+  }
 }
 
 
@@ -71,6 +120,7 @@ body {
   color: #fff;
   padding: 10px;
   text-align: center;
+  margin-top: auto;
 
   a {
     color: #fff;

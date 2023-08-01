@@ -2,7 +2,20 @@
 <%- include('templates/navigation.ejs') %>
 
 <main class="container">
-  <h1>HOMEPAGE</h1>
+  <% if (dishes.length > 0) { %>
+    <% dishes.forEach((dish) => { %>
+      <div>
+        <img class="dish-image" src="<%= dish.imageUrl %>" alt="<%= dish.dishName %>">
+        <div>
+          <h2><%= dish.ingredients %></h2>
+          <h2><%= dish.cookingTime %></h2>
+          <p><%= dish.description %></p>
+        </div>
+      </div>
+    <% }); %>
+  <% } else { %>
+    <h1>No Dishes Found!</h1>
+  <% } %>
 </main>
 
 <%- include('templates/foot.ejs') %>

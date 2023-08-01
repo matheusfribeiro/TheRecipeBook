@@ -12,6 +12,7 @@ body {
   background-color: bisque;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .top-menu {
@@ -45,6 +46,9 @@ body {
 .top-menu nav ul li a:hover {
   background-color: #000d1c;
 }
+.top-menu .active {
+  color: yellow;
+}
 
 .container {
   width: 960px;
@@ -52,7 +56,44 @@ body {
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
-  height: 85vh;
+}
+.container .dish-image {
+  width: 250px;
+}
+
+.card-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+.card-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.card-form input,
+.card-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.card-form textarea {
+  resize: vertical;
+}
+.card-form button {
+  background-color: #00264f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card-form button:hover {
+  background-color: #001d3b;
 }
 
 .footer {
@@ -60,6 +101,7 @@ body {
   color: #fff;
   padding: 10px;
   text-align: center;
+  margin-top: auto;
 }
 .footer a {
   color: #fff;
