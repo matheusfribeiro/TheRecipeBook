@@ -52,13 +52,77 @@ body {
 
 .container {
   width: 960px;
+  display: flex;
+  justify-content: center;
   flex: 1;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
+  flex-wrap: wrap;
 }
-.container .dish-image {
-  width: 250px;
+.container .card-wrapper {
+  width: 225px;
+  height: 375px;
+  perspective: 800px;
+  margin: 20px;
+}
+.container .card-wrapper:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+.container .card-wrapper .card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+.container .card-wrapper .card .front, .container .card-wrapper .card .back {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 2px #00264f;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.container .card-wrapper .card .front {
+  background-image: url("https://www.allrecipes.com/thmb/e8uotDI18ieXNBY0KpmtGKbxMRM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/238691-Simple-Macaroni-And-Cheese-mfs_008-4x3-6ed91ba87a1344558aacc0f9ef0f4b41.jpg");
+  background-size: 225px 300px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.container .card-wrapper .card .front h2 {
+  margin: 15px 0px;
+  font-size: 28px;
+  text-align: center;
+}
+.container .card-wrapper .card .back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.container .card-wrapper .card .back p {
+  font-size: 16px;
+  line-height: 1.3;
+  padding: 0px 10px;
+}
+.container .card-wrapper .card .back .btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 15px 0;
+  background-color: #00264f;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.container .card-wrapper .card .back .btn:hover {
+  background-color: #000d1c;
+}
+.container .card-wrapper .card .back .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 38, 79, 0.3);
 }
 
 .card-form {

@@ -16,6 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  
 }
 
 .top-menu {
@@ -63,15 +64,93 @@ body {
 
 .container {
   width: $container-width;
+  display: flex;
+  justify-content: center;
+  
   flex: 1;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
+  flex-wrap: wrap;
 
-  .dish-image {
-    width: 250px;
-  }
+  .card-wrapper {
+    width: 225px;
+    height: 375px;
+    perspective: 800px;
+    margin: 20px;
+
+    &:hover > .card {
+      cursor: pointer;
+      transform: rotateY(180deg);
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition: transform 1500ms;
+      transform-style: preserve-3d;
+
+      .front, .back {
+        width: 100%;
+        height: 100%;
+        border-radius: 2rem;
+        box-shadow: 00 0 5px 2px $primary-color;
+        position: absolute;
+        backface-visibility: hidden;
+      }
+
+      .front {
+        background-image: url('https://www.allrecipes.com/thmb/e8uotDI18ieXNBY0KpmtGKbxMRM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/238691-Simple-Macaroni-And-Cheese-mfs_008-4x3-6ed91ba87a1344558aacc0f9ef0f4b41.jpg');
+        background-size: 225px 300px;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+
+        h2 {
+          margin: 15px 0px;
+          font-size: 28px;
+          text-align: center;
+        }
+        
+      }
+
+      .back {
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+        p {
+          font-size: 16px;
+          line-height: 1.3;
+          padding: 0px 10px;
   
+        }
+  
+        .btn {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          margin: 15px 0;
+          background-color: $primary-color;
+          color: #fff;
+          font-size: 16px;
+          cursor: pointer;
+        
+          &:hover {
+            background-color: darken($primary-color, 10%);
+          }
+        
+          &:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 38, 79, 0.3); // 
+          }
+        }
+      }
+     
+    }
+  }
+ 
 }
 
 .card-form {
