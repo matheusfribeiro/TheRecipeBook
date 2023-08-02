@@ -160,6 +160,10 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-top: 10px;
 
+  ul {
+    list-style: none;
+  }
+
   label {
     display: block;
     font-weight: bold;
@@ -186,6 +190,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 15px;
 
     &:hover {
       background-color: #001d3b;

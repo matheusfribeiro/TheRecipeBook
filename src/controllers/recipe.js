@@ -21,6 +21,7 @@ exports.postCreateRecipe = (req, res, next) => {
   const { dishName, description, ingredients, imageUrl, cookingTime } = req.body
   const newDish = { dishName, description, ingredients, imageUrl, cookingTime }
   dishesData.push(newDish)
+  console.log(newDish, dishesData)
 
   res.redirect('/')
 }
