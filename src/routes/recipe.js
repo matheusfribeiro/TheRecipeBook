@@ -1,12 +1,12 @@
-const express = require("express")
-const recipeController = require('../controllers/recipe')
+const express = require("express");
+const recipeController = require("../controllers/recipe");
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/', recipeController.getIndex)
+router.get("/", recipeController.getIndex);
 
-router.get('/create-recipe', recipeController.getCreateRecipe)
+router.get("/create-recipe", recipeController.getCreateRecipe);
 
-router.post('/create-recipe', recipeController.postCreateRecipe)
+router.post("/create-recipe", recipeController.postCreateRecipe);
 
-module.exports = router
+module.exports = router;
