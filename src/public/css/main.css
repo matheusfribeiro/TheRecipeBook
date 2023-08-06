@@ -86,7 +86,6 @@ body {
   backface-visibility: hidden;
 }
 .container .card-wrapper .card .front {
-  background-image: url("https://www.allrecipes.com/thmb/e8uotDI18ieXNBY0KpmtGKbxMRM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/238691-Simple-Macaroni-And-Cheese-mfs_008-4x3-6ed91ba87a1344558aacc0f9ef0f4b41.jpg");
   background-size: 225px 300px;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -101,17 +100,23 @@ body {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  align-items: stretch;
+  justify-content: space-between;
 }
 .container .card-wrapper .card .back p {
   font-size: 16px;
   line-height: 1.3;
   padding: 0px 10px;
 }
+.container .card-wrapper .card .back ul {
+  padding: 0;
+  margin-top: 10px;
+}
 .container .card-wrapper .card .back .btn {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  margin: 15px 0;
+  margin-top: auto;
   background-color: #00264f;
   color: #fff;
   font-size: 16px;

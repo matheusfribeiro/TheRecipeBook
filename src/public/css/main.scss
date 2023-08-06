@@ -101,7 +101,6 @@ body {
       }
 
       .front {
-        background-image: url('https://www.allrecipes.com/thmb/e8uotDI18ieXNBY0KpmtGKbxMRM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/238691-Simple-Macaroni-And-Cheese-mfs_008-4x3-6ed91ba87a1344558aacc0f9ef0f4b41.jpg');
         background-size: 225px 300px;
         background-repeat: no-repeat;
         background-position: center bottom;
@@ -119,6 +118,8 @@ body {
         display: flex;
         flex-direction: column;
         padding: 20px;
+        align-items: stretch;
+        justify-content: space-between;
 
         p {
           font-size: 16px;
@@ -126,12 +127,17 @@ body {
           padding: 0px 10px;
   
         }
+
+        ul {
+          padding: 0; // Remove default padding from the ul
+          margin-top: 10px; // Add some spacing between the paragraphs and the list
+        }
   
         .btn {
           padding: 10px 20px;
           border: none;
           border-radius: 5px;
-          margin: 15px 0;
+          margin-top: auto ;
           background-color: $primary-color;
           color: #fff;
           font-size: 16px;

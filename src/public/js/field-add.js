@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const li = document.createElement("li");
     const input = document.createElement("input");
     input.type = "text";
-    input.name = "ingredient";
+    input.name = "ingredients";
     input.required = true;
     li.appendChild(input);
     ingredientsList.appendChild(li);

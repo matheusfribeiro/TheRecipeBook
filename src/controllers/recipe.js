@@ -17,12 +17,11 @@ exports.getCreateRecipe = (req, res, next) => {
 };
 
 exports.postCreateRecipe = (req, res, next) => {
-  console.log(req.body);
   const { dishName, description, ingredients, imageUrl, cookingTime } =
     req.body;
   const newDish = { dishName, description, ingredients, imageUrl, cookingTime };
   dishesData.push(newDish);
-  console.log(newDish, dishesData);
+  console.log(dishesData);
 
   res.redirect("/");
 };
