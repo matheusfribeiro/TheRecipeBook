@@ -1,12 +1,19 @@
-
 <div class="card-wrapper">
   <div class="card">
     <div class="front">
-      <h2>Pasta</h2>
+      <img src="<%= imageUrl %>" alt="<%= dishName %>">
+      <h2><%= dishName %></h2>
     </div>
     <div class="back">
-      <h4>back of card</h4>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae modi praesentium, et odit reiciendis impedit doloribus sequi veritatis! Ex debitis nam eum sunt amet provident dolorem ad porro deserunt neque.</p>
+      <h4>Description:</h4>
+      <p><%= description %></p>
+      <h4>Ingredients:</h4>
+      <ul>
+        <% ingredients.forEach(ingredient => { %>
+          <li><%= ingredient %></li>
+        <% }) %>
+      </ul>
+      <p>Cooking Time: <%= cookingTime %> minutes</p>
       <button class="btn">Save Recipe</button>
     </div>
   </div>

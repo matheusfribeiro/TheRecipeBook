@@ -3,7 +3,11 @@
 
 <main class="container">
   
-  <%- include('templates/card.ejs') %>
+  <% if (dishes.length > 0) { %>
+    <%- include('templates/card.ejs') %>
+  <% } else { %>
+    <h1>No recipes found</h1>
+  <% } %>
 
 </main>
 
