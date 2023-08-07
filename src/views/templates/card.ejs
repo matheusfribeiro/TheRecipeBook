@@ -1,40 +1,19 @@
 <div class="card-wrapper">
   <div class="card">
-    <% dishes.forEach(dish => { %>
-      <div class="front" style="background-image: url('<%= dish.imageUrl %>')";>
-        <h2><%= dish.dishName %></h2>
-      </div>
-      <div class="back">
-        <h4>Description:</h4>
-        <p><%= dish.description %></p>
-        <h4>Ingredients:</h4>
-        <ul>
-          <% dish.ingredients.forEach(ingredient => { %>
-            <li><%= ingredient %></li>
-          <% }) %>
-        </ul>
-        <h4>Cooking Time: <%= dish.cookingTime %> minutes</h4>
-      <% }) %>
+    <div class="front" style="background-image: url('<%= dish.imageUrl %>')";>
+      <h2><%= dish.dishName %></h2>
+    </div>
+    <div class="back">
+      <h4>Description:</h4>
+      <p><%= dish.description %></p>
+      <h4>Ingredients:</h4>
+      <ul>
+        <% dish.ingredients.forEach(ingredient => { %>
+          <li><%= ingredient %></li>
+        <% }) %>
+      </ul>
+      <h4>Cooking Time: <%= dish.cookingTime %> minutes</h4>
       <button class="btn">Save Recipe</button>
     </div>
   </div>
 </div>
-
-
-
-
-
-<% /*  %>
-<% dishes.forEach((dish) => { %> 
-  <div class="card">
-    <h2><%= dish.dishName %></h2>
-    <img class="dish-image" src="<%= dish.imageUrl %>" alt="<%= dish.dishName %>">
-    <div class="info">
-      <p><%= dish.description %></p>
-      <h3><%= dish.ingredients %></h3>
-      <h3><%= dish.cookingTime %></h3>
-    </div>
-  </div>
-<% }); %>
-
-<% */ %>

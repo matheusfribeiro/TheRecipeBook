@@ -11,12 +11,16 @@ html, body {
   height: 100%;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   background-color: bisque;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  
 }
 
 .top-menu {
@@ -29,8 +33,7 @@ body {
   nav {
     width: $container-width;
     display: flex;
-    
-    
+
     ul {
       list-style: none;
       margin: 0;
@@ -38,7 +41,6 @@ body {
       width: 100%;
       display: flex;
       justify-content: space-around;
-      
 
       li {
         display: inline-block;
@@ -66,7 +68,7 @@ body {
   width: $container-width;
   display: flex;
   justify-content: center;
-  
+
   flex: 1;
   margin: 0 auto;
   padding: 20px;
@@ -93,9 +95,9 @@ body {
 
       .front, .back {
         width: 100%;
-        height: 100%;
+        
         border-radius: 2rem;
-        box-shadow: 00 0 5px 2px $primary-color;
+        box-shadow: 0 0 5px 2px $primary-color;
         position: absolute;
         backface-visibility: hidden;
       }
@@ -104,13 +106,14 @@ body {
         background-size: 225px 300px;
         background-repeat: no-repeat;
         background-position: center bottom;
+        height: 100%;
 
         h2 {
           margin: 15px 0px;
           font-size: 28px;
           text-align: center;
         }
-        
+
       }
 
       .back {
@@ -125,38 +128,40 @@ body {
           font-size: 16px;
           line-height: 1.3;
           padding: 0px 10px;
-  
+
         }
 
         ul {
-          padding: 0; // Remove default padding from the ul
-          margin-top: 10px; // Add some spacing between the paragraphs and the list
+          padding: 0 15px; // Remove default padding from the ul
+          margin: 10px 0; // Add some spacing between the paragraphs and the list
         }
-  
+
         .btn {
           padding: 10px 20px;
           border: none;
           border-radius: 5px;
-          margin-top: auto ;
+          margin-top: 10px ;
           background-color: $primary-color;
           color: #fff;
           font-size: 16px;
           cursor: pointer;
-        
+
           &:hover {
             background-color: darken($primary-color, 10%);
           }
-        
+
           &:focus {
             outline: none;
-            box-shadow: 0 0 0 2px rgba(0, 38, 79, 0.3); // 
+            box-shadow: 0 0 0 2px rgba(0, 38, 79, 0.3);
           }
         }
+
+
       }
-     
+
     }
   }
- 
+
 }
 
 .card-form {
@@ -204,13 +209,15 @@ body {
   }
 }
 
-
 .footer {
   background-color: darken($primary-color, 10%);
   color: #fff;
   padding: 10px;
   text-align: center;
-  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 
   a {
     color: #fff;

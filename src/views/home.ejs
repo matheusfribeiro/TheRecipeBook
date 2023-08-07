@@ -4,7 +4,9 @@
 <main class="container">
   
   <% if (dishes.length > 0) { %>
-    <%- include('templates/card.ejs') %>
+    <% dishes.forEach(dish => { %>
+      <%- include('templates/card.ejs', { dish: dish }) %>
+    <% }) %>
   <% } else { %>
     <h1>No recipes found</h1>
   <% } %>
