@@ -7,11 +7,7 @@
       <h4>Description:</h4>
       <p><%= dish.description %></p>
       <h4>Ingredients:</h4>
-      <ul>
-        <% dish.ingredients.forEach(ingredient => { %>
-          <li><%= ingredient %></li>
-        <% }) %>
-      </ul>
+        
       <h4>Cooking Time: <%= dish.cookingTime %> minutes</h4>
       <button class="btn">Save Recipe</button>
     </div>
