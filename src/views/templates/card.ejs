@@ -1,4 +1,4 @@
-<div class="card-wrapper">
+<div class="card-wrapper" >
   <div class="card">
     <div class="front" style="background-image: url('<%= dish.imageUrl %>')";>
       <h2><%= dish.dishName %></h2>
@@ -7,7 +7,11 @@
       <h4>Description:</h4>
       <p><%= dish.description %></p>
       <h4>Ingredients:</h4>
-        
+      <ul>
+        <% dish.ingredients.forEach((ingredient) => { %>
+          <li><%= ingredient.ingredientName %></li>
+        <% }) %>
+      </ul>
       <h4>Cooking Time: <%= dish.cookingTime %> minutes</h4>
       <button class="btn">Save Recipe</button>
     </div>

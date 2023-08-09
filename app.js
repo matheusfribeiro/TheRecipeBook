@@ -27,7 +27,8 @@ app.use(recipeRoutes);
 
 app.use(errorController.get404)
 
-Recipe.hasMany(Ingredients)
+Recipe.hasMany(Ingredients, { foreignKey: 'recipeId' });
+Ingredients.belongsTo(Recipe)
 
 db
   .sync()
