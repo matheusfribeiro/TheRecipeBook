@@ -1,4 +1,5 @@
 const express = require('express');
+const product = require('./api/product')
 const path = require('path')
 
 const db = require('./src/utils/database')
@@ -22,6 +23,8 @@ app.use(express.static(path.join(__dirname, 'src', 'public')));
 
 // Set server to receive data via POST - form
 app.use(express.urlencoded({ extended: true }))
+
+app.use("/api/product", product)
 
 app.use(recipeRoutes);
 
